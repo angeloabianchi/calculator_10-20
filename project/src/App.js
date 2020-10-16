@@ -1,24 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <div className="border">
+        <div>
+          <button className="button-size">C</button>
+          <input type="text" className="input"></input>
+        </div>
+        <div>
+          <button className="button-size">7</button>
+          <button className="button-size">8</button>
+          <button className="button-size">9</button>
+          <button className="button-size">+</button>
+        </div>
+        <div>
+          <button className="button-size">4</button>
+          <button className="button-size">5</button>
+          <button className="button-size">6</button>
+          <button className="button-size">-</button>
+        </div>
+        <div>
+          <button className="button-size">1</button>
+          <button className="button-size">2</button>
+          <button className="button-size">3</button>
+          <button className="button-size">*</button>
+        </div>
+        <div>
+          <button className="button-size">0</button>
+          <button className="button-size">.</button>
+          <button className="button-size">=</button>
+          <button className="button-size">/</button>
+        </div>
+      </div>
+
     </div>
   );
 }
