@@ -1,26 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
   background-color: darkred;
-  max-width: 200px;
-  max-height: 450px;
+  width: 250px;
+  margin: 100px auto auto auto;
+  border-radius: 10px;
+
 }
 
-.border {
+.first-line {
   display: flex;
-  flex-direction: column;
-  border: 20px 10px 10px 10px;
-  margin-top: 10px;
+  width: 200px;
+  margin-left: 25px;
+  padding-top: 10px;
+  margin-bottom: 5px;
+
 }
 
-.input{
-  max-width: 95px;
-  margin: 2px 2px 2px 2px;
-  border: 5px 5px 5px 5px;
-  padding: 8px 8px 8px 8px;
+.last-line {
+  padding-bottom: 10px;
 }
 
-.button-size {
-  margin: 2px 2px 2px 2px;
-  border: 5px 5px 5px 5px;
-  padding: 8px 8px 8px 8px;
+.App-display {
+  width: 300px;
+  background-color: white;
+  border-radius: 5px;
+  margin-left: 3px;
+  display: grid;
+  align-items: center;
+}
+
+.DialButton {
+  width: 50px;
+  height: 50px;
+  margin: 3px;
+}
+
+.C-button {
+  margin: auto;
+  border-radius: 150px;
 }
