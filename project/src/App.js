@@ -15,7 +15,7 @@ function App() {
     setNumberTwo(numberTwo + '' + n);
     }
   }
-  const clearNumber = () => setNumberOne('') + setOperation('') + setNumberTwo('');
+  const clearNumber = () => setNumberOne('') + setOperation('') + setNumberTwo('') + setResult('');
   const solve = () => {
     if(operation === '+') {
       setResult (parseFloat(numberOne) + parseFloat(numberTwo));
@@ -31,12 +31,19 @@ function App() {
     }
   }
 
+  function oneDisplay () {
+    if (result === '') {
+      return (numberOne + operation + numberTwo);
+    } else {
+      return (result);
+    }
+  }
+
   return (
     <div className="App">
       <div className="line first-line">
         <CleanButton onClick={clearNumber} />
-        <Display content={numberOne + operation + numberTwo} />
-        <Display content={result}/>
+        <Display content={oneDisplay(result)} />
       </div>
 
       <div className="line">
