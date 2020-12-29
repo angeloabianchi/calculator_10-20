@@ -11,3 +11,7 @@ export const CleanButton = props => {
 export const Display = props => {
   return <div className="App-display">{props.content}</div>
 };
+
+export const CleanOneButton = props => {
+  return <button className="DialButton C-button" onClick={() => props.onClick()}>CE</button>;
+}
