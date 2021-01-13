@@ -1,11 +1,21 @@
 import React from 'react';
 
 export const DialButton = props => {
-  return <button className="DialButton" onClick={() => props.onClick(props.value)}>{props.value}</button>;
+  const handleClick = () => {
+    props.onClick(props.value)
+  };
+  const classes = ["DialButton"];
+  if(props.secondary) {
+    classes.push("DialButton-secondary");
+  }
+  if(props.terciary) {
+    classes.push("DialButton-terciary");
+  }
+  return <button className={classes.join(" ")} onClick={handleClick}>{props.value}</button>;
 };
 
 export const CleanButton = props => {
-  return <button className="DialButton C-button" onClick={() => props.onClick()}>C</button>;
+  return <button className={"DialButton" + (props.secondary ? "-secondary" : "")} onClick={() => props.onClick()}>C</button>;
 };
 
 export const Display = props => {
@@ -13,5 +23,5 @@ export const Display = props => {
 };
 
 export const CleanOneButton = props => {
-  return <button className="DialButton C-button" onClick={() => props.onClick()}>CE</button>;
+  return <button className={"DialButton" + (props.secondary ? "-secondary" : "")} onClick={() => props.onClick()}>CE</button>;
 }

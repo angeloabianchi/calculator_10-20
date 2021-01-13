@@ -49,12 +49,12 @@ function App() {
       setResult(thisResult);
       setHistory([...history, numberOne + operation + numberTwo + "=" + thisResult]);
     }
-    if(operation === '*') {
+    if(operation === 'x') {
       const thisResult = (numberOne * numberTwo);
       setResult (thisResult);
       setHistory([...history, numberOne + operation + numberTwo + "=" + thisResult]);
     }
-    if(operation === '/') {
+    if(operation === '÷') {
       const thisResult = numberOne / numberTwo
       setResult (thisResult);
       setHistory([...history, numberOne + operation + numberTwo + "=" + thisResult]);
@@ -75,38 +75,46 @@ function App() {
   return (
     <div className="App">
       <div className="line first-line">
-        <CleanOneButton onClick={clearNumber} />
-        <CleanButton onClick={clearAll} />
         <Display content={oneDisplay(result)} />
       </div>
-      <div>{history.map(x => <div>{x}</div>)}</div>
+    <div className="line">
+      {history.map(x => <div>{x}</div>)}
+    </div>
 
-      <div className="line">
+    <div className="line first-line">
+      <CleanButton secondary onClick={clearAll} />
+      <CleanOneButton secondary onClick={clearNumber} />
+      <DialButton secondary value="%" onClick={() => {}} />
+      <DialButton secondary value="÷" onClick={addOperation} />
+    </div>
+
+    <div className="line">
         <DialButton value={7} onClick={addNumber} />
         <DialButton value={8} onClick={addNumber} />
         <DialButton value={9} onClick={addNumber} />
-        <DialButton value="+" onClick={addOperation} />
+        <DialButton secondary value="x" onClick={addOperation} />
+
       </div>
 
       <div className="line">
         <DialButton value={4} onClick={addNumber} />
         <DialButton value={5} onClick={addNumber} />
         <DialButton value={6} onClick={addNumber} />
-        <DialButton value="-" onClick={addOperation} />
+        <DialButton secondary value="-" onClick={addOperation} />
       </div>
 
       <div className="line">
         <DialButton value={1} onClick={addNumber} />
         <DialButton value={2} onClick={addNumber} />
         <DialButton value={3} onClick={addNumber} />
-        <DialButton value="*" onClick={addOperation} />
+        <DialButton secondary value="+" onClick={addOperation} />
       </div>
 
       <div className="line last-line">
+        <DialButton value="+/-" onClick={() => {}} />
         <DialButton value={0} onClick={addNumber} />
         <DialButton value="." onClick={addNumber} />
-        <DialButton value="=" onClick={solve} />
-        <DialButton value="/" onClick={addOperation} />
+        <DialButton terciary value="=" onClick={solve} />
       </div>
     </div>
   );

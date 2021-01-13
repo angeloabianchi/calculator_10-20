@@ -6,20 +6,19 @@
 
 .App {
   text-align: center;
-  background-color: darkred;
+  background-color: black;
   width: 250px;
   margin: 100px auto auto auto;
   border-radius: 10px;
+}
 
+.line {
+  color: white;
 }
 
 .first-line {
   display: flex;
-  width: 200px;
-  margin-left: 25px;
-  padding-top: 10px;
-  margin-bottom: 5px;
-
+  border-top: 1px darkgray solid;
 }
 
 .last-line {
@@ -28,20 +27,65 @@
 
 .App-display {
   width: 300px;
-  background-color: white;
-  border-radius: 5px;
+  height: 200px;
+  font-size: 36px;
   margin-left: 3px;
   display: grid;
   align-items: center;
+  color: white;
+  text-align: right;
 }
 
+.DialButton:focus {
+  outline: none;
+}
+.DialButton:hover {
+  background: #1b1b1b;
+}
+.DialButton:active {
+  background: black;
+}
 .DialButton {
-  width: 50px;
+  width: 25%;
   height: 50px;
-  margin: 3px;
+  color: white;
+  background-color: black;
+  font-size: 24px;
+  border-width: 0;
+}
+.DialButton-secondary:focus {
+  outline: none;
+}
+.DialButton-secondary:hover {
+  background: #1b1b1b;
+}
+.DialButton-secondary:active {
+  background: black;
+}
+.DialButton-secondary {
+  width: 25%;
+  height: 50px;
+  color: darkorange;
+  background-color: black;
+  font-size: 24px;
+  border-width: 0;
 }
 
-.C-button {
-  margin: auto;
-  border-radius: 150px;
+.DialButton-terciary:focus {
+  outline: none;
+}
+.DialButton-terciary:hover {
+  background: #1b1b1b;
+}
+.DialButton-terciary:active {
+  background: black;
+}
+.DialButton-terciary {
+  width: 25%;
+  height: 50px;
+  color: white;
+  background-color: darkorange;
+  font-size: 24px;
+  border-width: 0;
+  border-radius: 600px;
 }
